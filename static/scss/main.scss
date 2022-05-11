@@ -1,0 +1,21 @@
+* {
+  color: $sec;
+  font-family: 'Manrope';
+}
+
+
+@font-face {
+  font-family: 'Manrope'!important;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/static/scss/fonts/Manrope/Manrope-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/static/scss/fonts/Manrope-Bold.ttf') format('truetype');
+}

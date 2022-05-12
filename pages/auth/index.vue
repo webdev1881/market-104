@@ -2,6 +2,10 @@
 
   <div class='auth'>
 
+    <h3> Hello, {{name.name}} </h3>
+
+    
+
     <div class="auth_wrap">
       <UIM-Button
       class="google_button"
@@ -13,7 +17,7 @@
     <div class="t">987987</div>
 
     <div class="row">Email: {{ email }}</div>
-    <div class="row"><button @click="setEmail">Set email</button></div>
+    <div class="row"><button @click="login">Login</button></div>
     <div class="row"><button @click="createUser">createUser</button></div>
     <div class="row"><button @click="createUserGoogle">createUserGoogle</button></div>
     <div class="row"><input v-model="code" ></div>
@@ -48,10 +52,24 @@ signOut,
 export default {
   name: 'test',
   data: () => ({
+
+    user: {
+      name: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    },
+
     email: '',
     code: '',
     google_text: 'GOGLE'
   }),
+
+  async mounted() {
+    // console.log( this.$store.getters )
+    // const user = await this.$store.dispatch('fetchUser')
+    // console.log( user )
+  },
 
 
 
@@ -67,41 +85,59 @@ export default {
     },
 
     async setEmail() {
-      this.$accessor.user.setEmail('test@email.com')
+      console.log( this.$accessor )
+      // this.$accessor.user.setEmail('test@email.com')
     },
 
 
     async createUserGoogle() {
-      console.log( 'createUserGoogle' )
-      const auth = getAuth();
-      const provider = new GoogleAuthProvider();
-      signInWithPopup(auth, provider)
-        .then((result) => {
-          const credential = GoogleAuthProvider.credentialFromResult(result);
-          const token = credential.accessToken;
-          const user = result.user;
-          console.log( auth.currentUser )
-        }).catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          const email = error.email;
-          const credential = GoogleAuthProvider.credentialFromError(error);
-        });
+      // console.log( 'createUserGoogle' )
+      // const auth = getAuth();
+      // const provider = new GoogleAuthProvider();
+      // signInWithPopup(auth, provider)
+      //   .then((result) => {
+      //     const credential = GoogleAuthProvider.credentialFromResult(result);
+      //     const token = credential.accessToken;
+      //     const user = result.user;
+      //     console.log( user.displayName )
+      //     commit('setUser', { 'id': user.id, 'name': user.displayName, 'email': user.email})
+      //   }).catch((error) => {
+      //     const errorCode = error.code;
+      //     const errorMessage = error.message;
+      //     const email = error.email;
+      //     const credential = GoogleAuthProvider.credentialFromError(error);
+      //   });
+      await this.$store.dispatch( 'createUserGoogle');
     },
 
 
     async createUser() {
-      const auth = getAuth();
-      createUserWithEmailAndPassword(auth, 'foo_5_@foo.foo', '123456aaaaaa')
-        .then((userCredential) => {
-          const user = userCredential.user;
-          console.log( auth )
-        })
-        .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-        });
+      const formData = {
+        // email: this.user.email,
+        // password: this.user.password,
+        // name: this.user.name,
+        email: 'foo_5556667899_@foo.foo',
+        password: '123456aaaaaa',
+        name: 'Vladim',   
+      }
+      await this.$store.dispatch( 'createUser', formData );
     },
+
+
+    async login() {
+      const formData = {
+        // email: this.user.email,
+        // password: this.user.password,
+        // name: this.user.name,
+        email: 'foo_555_@foo.foo',
+        password: '123456aaaaaa',
+        // name: 'Vladim', 
+      }
+      await this.$store.dispatch("login", formData);
+    },
+
+
+
 
     async createUserPhone() {      
       const auth = getAuth();
@@ -150,6 +186,12 @@ export default {
 
   },
 
+  computed: {
+    name() {
+      return this.$store.getters.getUser
+    }
+  },
+
 
   watch: {
   '$accessor.user.email': function() {
@@ -174,7 +216,7 @@ export default {
 }
 
 .google_button::before {
-  content: url("@/static/svg/google.svg");
+  content: url("@/static/svg/go.svg");
   position: absolute;
   width: 25px;
   height: 25px;

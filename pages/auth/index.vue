@@ -3,6 +3,9 @@
   <div class='auth'>
 
     <h3> Hello, {{name.name}} </h3>
+    <div>
+      <nuxt-link to="/" >HOME</nuxt-link>
+    </div>
 
     
 
@@ -131,7 +134,7 @@ export default {
         // name: this.user.name,
         email: 'foo_555_@foo.foo',
         password: '123456aaaaaa',
-        // name: 'Vladim', 
+        name: 'Vladim',
       }
       await this.$store.dispatch("login", formData);
     },
@@ -226,7 +229,7 @@ export default {
 }
   
 .auth_wrap {
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;

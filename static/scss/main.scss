@@ -1,6 +1,7 @@
 * {
   color: $sec;
   font-family: 'Manrope';
+  font-size: 13px;
 }
 
 
@@ -9,13 +10,15 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/static/scss/fonts/Manrope/Manrope-Regular.ttf') format('truetype');
+  // src: url('/static/scss/fonts/Manrope/Manrope-Regular.ttf') format('truetype');
+  src: url('./fonts/Manrope/Manrope-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 800;
   font-display: swap;
-  src: url('/static/scss/fonts/Manrope-Bold.ttf') format('truetype');
+  // src: url('/static/scss/fonts/Manrope-Bold.ttf') format('truetype');
+  src: url('./fonts/Manrope/Manrope-Bold.ttf') format('truetype');
 }

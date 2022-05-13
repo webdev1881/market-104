@@ -1,6 +1,6 @@
 <template>
 
-    <div>
+    <div class="main_layout">
         <Header />
         <main>
             <div class="container mx-auto">
@@ -31,4 +31,8 @@ export default {
 
 
 <style lang='scss' scoped>
+.main_layout {
+    max-width: 1519px;
+    margin: 0 auto;
+}
 </style>

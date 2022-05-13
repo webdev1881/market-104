@@ -48,13 +48,11 @@ export default {
         const id = await dispatch('getUserId')
         console.log( id )
         const db = getDatabase();
-        try {
           set(ref(db, 'users/' + id), {
             username: name,
             email: email,
           });
-          commit('setUser', { 'id': id, 'name': name, 'email': email})
-        } catch (e) {console.log( e )}
+        commit('setUser', { 'id': id, 'name': name, 'email': email})
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -64,7 +62,7 @@ export default {
 
 
 
-  async createUserGoogle() {
+  async createUserGoogle({ dispatch, commit }) {
     console.log( 'createUserGoogle' )
     const auth = getAuth();
     const provider = new GoogleAuthProvider();
@@ -73,8 +71,7 @@ export default {
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;
         const user = result.user;
-        console.log( user.displayName )
-        commit('setUser', { 'id': user.id, 'name': user.displayName, 'email': user.email})
+        commit('setUser', { 'id': user.uid, 'name': user.displayName, 'email': user.email})
       }).catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
@@ -88,18 +85,20 @@ export default {
 
 
 
-  async login({ dispatch, commit }, { email, password }) {
+  async login({ dispatch, commit }, { email, password, name }) {
     console.log( 'login' )
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Signed in 
-      const user = userCredential.user;
-      console.log( user )
+      const user = userCredential.user
+      user.displayName = name
+      console.log( user )  
+      commit('setUser', { 'id': user.uid, 'name': user.displayName, 'email': user.email})
     })
     .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
+      const errorCode = error.code
+      const errorMessage = error.message
       console.log( errorMessage )
     });
   },

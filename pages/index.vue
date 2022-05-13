@@ -2,7 +2,7 @@
 
   <div class="">
 
-    <h4>main layout</h4>
+    <h4>home layout</h4>
     <div class=" flex flex-row justify-around gap-4 columns-3 ">
       123
         <div class=" text-primary-primary w-full p-1 border-solid border border-indigo-900 rounded-md bg-sky-600 hover:bg-sky-700">111</div>

@@ -50,7 +50,7 @@ export default {
   data: () => ({
     email: '',
     code: '',
-    google_text: 'GOGLE'
+    google_text: 'Google'
   }),
 
 

@@ -32,7 +32,7 @@ export default {
 
 <style lang='scss' scoped>
 .main_layout {
-    max-width: 1519px;
-    margin: 0 auto;
+    // max-width: 1519px;
+    // margin: 0 auto;
 }
 </style>

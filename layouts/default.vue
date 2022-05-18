@@ -1,9 +1,9 @@
 <template>
 
-    <div class="main_layout">
+    <div>
         <Header />
-        <main>
-            <div class="container mx-auto">
+        <main class="main_layout">
+            <div class="md:container md:mx-auto">
                 <Nuxt />
             </div>
         </main>
@@ -32,7 +32,7 @@ export default {
 
 <style lang='scss' scoped>
 .main_layout {
-    // max-width: 1519px;
-    // margin: 0 auto;
+    max-width: $xl;
+    margin: 0 auto;
 }
 </style>

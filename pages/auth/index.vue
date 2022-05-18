@@ -2,7 +2,7 @@
 
   <div class='auth'>
 
-    <h3> Hello, {{name.name}} </h3>
+    <h3> Hello, {{ name.name || "Гість" }} </h3>
     <div>
       <nuxt-link to="/" >HOME</nuxt-link>
     </div>
@@ -53,7 +53,7 @@ signOut,
 
 
 export default {
-  name: 'test',
+  name: 'auth',
   data: () => ({
 
     user: {
@@ -94,22 +94,6 @@ export default {
 
 
     async createUserGoogle() {
-      // console.log( 'createUserGoogle' )
-      // const auth = getAuth();
-      // const provider = new GoogleAuthProvider();
-      // signInWithPopup(auth, provider)
-      //   .then((result) => {
-      //     const credential = GoogleAuthProvider.credentialFromResult(result);
-      //     const token = credential.accessToken;
-      //     const user = result.user;
-      //     console.log( user.displayName )
-      //     commit('setUser', { 'id': user.id, 'name': user.displayName, 'email': user.email})
-      //   }).catch((error) => {
-      //     const errorCode = error.code;
-      //     const errorMessage = error.message;
-      //     const email = error.email;
-      //     const credential = GoogleAuthProvider.credentialFromError(error);
-      //   });
       await this.$store.dispatch( 'createUserGoogle');
     },
 
@@ -191,7 +175,7 @@ export default {
 
   computed: {
     name() {
-      return this.$store.getters.getUser
+      return this.$store.getters.getUser || "Гість"
     }
   },
 

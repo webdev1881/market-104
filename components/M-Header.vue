@@ -5,10 +5,10 @@
     <div class="header_top">
 
       <div class="header-left">
-        <div class="header-logo">
+        <nuxt-link to="/" class="header-logo">
           <img src="@/static/img/logo.png" alt="" class="header-logo__pic">
           <div class="header-logo__title">маркет</div>
-        </div>
+        </nuxt-link>
         <div class="header-location">
           <div class="header-location__city">м. Івано-Франківськ</div>
           <div class="header-location__tel">+380 800 104 104</div>
@@ -96,7 +96,7 @@ export default {
     justify-content: space-between;
     padding: 10px 0;
     width: 100%;
-    max-width: 1519px;
+    max-width: $xl;
     margin: 0 auto;
     .header-left {
       display: flex;
@@ -174,11 +174,11 @@ export default {
       display: flex;
       justify-content: space-between;
       width: 100%;
-      max-width: 1519px;
+      max-width: $xl;
       margin: 0 auto;
     }
     .header_catalog {
-      width: 200px;
+      width: 240px;
       margin-right: 20px;
       margin-left: -5px;  
       display: flex;
@@ -199,19 +199,11 @@ export default {
         mask-image: url(@/static/svg/catalog.svg);
       }
       
-      // &::before {
-      //   content: url("@/static/svg/catalog.svg");
-      //   position: absolute;
-      //   fill: #fff!important;
-      //   width: 25px;
-      //   height: 25px;
-      //   margin: 3px 3px;
-      //   left: 45px;
-      // }
     }
     .header_search {
-      width: 85%;
+      width: 100%;
       border-radius: 8px;
+      padding-left: 10px;
     }
     .header_controls {
       display: flex;

@@ -11,7 +11,7 @@
         </nuxt-link>
         <div class="header-location">
           <div class="header-location__city">м. Івано-Франківськ</div>
-          <div class="header-location__tel">+380 800 104 104</div>
+          <div class="header-location__tel">+380 800 104 105</div>
         </div>
       </div>
 

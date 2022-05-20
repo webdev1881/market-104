@@ -2,7 +2,7 @@
 
   <div class='header'>
 
-    <div class="header_top">
+    <div class="header_top md:container md:mx-auto">
 
       <div class="header-left">
         <nuxt-link to="/" class="header-logo">
@@ -49,16 +49,16 @@
 
 
     <div class="header_bottom">
-      <div class="header_bottom__wrapper">
+      <div class="header_bottom__wrapper md:container md:mx-auto">
         <div class="header_catalog">
           <div class="catalog_icon"></div>
           <span> Каталог товарів </span>
         </div>
         <input class="header_search">
         <div class="header_controls">
-        <div class="wrap_control"><div class="control_icon compare"></div><div class="count">42</div></div>
-        <div class="wrap_control"><div class="control_icon favorite"></div><div class="count">42</div></div>
-        <div class="wrap_control"><div class="control_icon cart"></div><div class="count">42</div></div>
+        <div class="wrap_control"><div class="control_icon compare"></div><div class="count ">42</div></div>
+        <div class="wrap_control"><div class="control_icon favorite"></div><div class="count ">42</div></div>
+        <div class="wrap_control"><div class="control_icon cart"></div><div class="count ">42</div></div>
         </div>
       </div>
     </div>
@@ -94,9 +94,9 @@ export default {
   .header_top {
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
-    width: 100%;
-    max-width: $xl;
+    padding: 10px 0px;
+    // width: 100%;
+    // max-width: $xl;
     margin: 0 auto;
     .header-left {
       display: flex;
@@ -173,14 +173,15 @@ export default {
     .header_bottom__wrapper {
       display: flex;
       justify-content: space-between;
-      width: 100%;
-      max-width: $xl;
+      padding-right: 20px;
+      // width: 100%;
+      // max-width: $xl;
       margin: 0 auto;
     }
     .header_catalog {
-      width: 240px;
-      margin-right: 20px;
-      margin-left: -5px;  
+      min-width: 175px;
+      // margin-right: 20px;
+      // margin-left: -5px;  
       display: flex;
       align-items: center;
       cursor: pointer;
@@ -195,6 +196,7 @@ export default {
         width: 35px;
         height: 35px;
         margin-right: 10px;
+        margin-left: -5px;
         background-color: #fff;
         mask-image: url(@/static/svg/catalog.svg);
       }
@@ -238,7 +240,7 @@ export default {
         mask-image: url(@/static/svg/bar.svg);
       }
       .favorite {
-        mask-image: url(@/static/svg/fav.svg);
+        mask-image: url(@/static/svg/favorite.svg);
       }
       .cart {
         mask-image: url(@/static/svg/cart.svg);

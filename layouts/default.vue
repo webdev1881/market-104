@@ -2,11 +2,13 @@
 
     <div>
         <Header />
+
         <main class="main_layout">
             <div class="md:container md:mx-auto">
                 <Nuxt />
             </div>
         </main>
+        
         <Footer />
     </div>
     

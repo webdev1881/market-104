@@ -25,16 +25,16 @@
             :to="link.url"
             :exact="link.exact">
 
-            <a :href="href"  @click="navigate" class="header-right__navbar__link">{{link.title}}</a>
+            <a :href="href"  @click="navigate" class="header-right__navbar__link">
+              {{ $t(link.title) }}
+            </a>
 
           </nuxt-link>
         </ul>
         <div class="header-right__localize">
-          <nuxt-link :to="switchLocalePath('ua')">UA</nuxt-link>
-          <a class="header-right__localize__ua"> UA </a>
+          <nuxt-link :to="switchLocalePath('ua')" active-class="active" :exact="true">UA</nuxt-link>
           <span> | </span>
-          <nuxt-link :to="switchLocalePath('ru')">RU</nuxt-link>
-          <a class="header-right__localize__ru"> RU </a>
+          <nuxt-link :to="switchLocalePath('ru')" active-class="active">RU</nuxt-link>
         </div>
         <div class="header-right__account">
           <img src="@/static/img/account.png" alt="" class="account_logo_pic">
@@ -76,11 +76,11 @@ export default {
   name: 'm-header',
   data: () => ({
     links: [
-      {title: 'Акції', url: '/stock', exact: true},
-      {title: 'Сертифікати', url: '/certificate'},
-      {title: 'Фінанси', url: '/finance'},
-      {title: 'Сервіс', url: '/service'},
-      {title: 'Страхування', url: '/inshurance'}
+      {title: 'stock', url: '/stock', exact: true},
+      {title: 'certificate', url: '/certificate'},
+      {title: 'finance', url: '/finance'},
+      {title: 'service', url: '/service'},
+      {title: 'inshurance', url: '/inshurance'}
     ]
   }),
 }
@@ -135,11 +135,13 @@ export default {
         }
       }
       .header-right__localize {
-        font-weight: 800;
         margin-right: 25px;
         &__ua, &__ru {
           cursor: pointer;
         }
+      }
+      .active {
+        font-weight: 800;
       }
       .header-right__account {
         display: flex;

@@ -1,3 +1,8 @@
 export default {
-  welcome: 'Пrevet'
+  welcome: 'Пrevet',
+  stock: 'Акции',
+  certificate: 'Сертификаты',
+  finance: 'Финансы',
+  service: 'Сервис', 
+  inshurance: 'Страхование',
 }

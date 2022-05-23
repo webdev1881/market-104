@@ -78,7 +78,7 @@ export default {
   ],
 
   i18n: {
-    defaultLocale: 'ua',
+    defaultLocale: '',
     locales: [
       {code: 'ua', file: "ua.js" },
       {code: 'ru', file: "ru.js" },

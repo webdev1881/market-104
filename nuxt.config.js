@@ -47,6 +47,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/i18n',
     [
       '@nuxtjs/firebase',
       {
@@ -70,9 +71,33 @@ export default {
           analytics: true,
           remoteConfig: true
         }
-      }
-    ]
+      },
+      
+    ],
+    
   ],
+
+  i18n: {
+    defaultLocale: 'ua',
+    locales: [
+      {code: 'ua', file: "ua.js" },
+      {code: 'ru', file: "ru.js" },
+    ],
+    lazy: true,
+    langDir: "locales/"
+
+    // vueI18n: {
+    //   fallbackLocale: 'ua',
+    //   messages: {
+    //     ua: {
+    //       welcome: 'Привіт'
+    //     },
+    //     ru: {
+    //       welcome: 'Приевт'
+    //     },
+    //   }
+    // }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

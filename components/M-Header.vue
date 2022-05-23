@@ -30,8 +30,10 @@
           </nuxt-link>
         </ul>
         <div class="header-right__localize">
+          <nuxt-link :to="switchLocalePath('ua')">UA</nuxt-link>
           <a class="header-right__localize__ua"> UA </a>
           <span> | </span>
+          <nuxt-link :to="switchLocalePath('ru')">RU</nuxt-link>
           <a class="header-right__localize__ru"> RU </a>
         </div>
         <div class="header-right__account">

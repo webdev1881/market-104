@@ -34,7 +34,7 @@ export default {
 
 .navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 10px 0;
   &-item:hover {
     // font-weight: 800;

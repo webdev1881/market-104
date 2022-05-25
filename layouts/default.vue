@@ -34,7 +34,7 @@ export default {
 
 <style lang='scss' scoped>
 .main_layout {
-    max-width: $xl;
-    margin: 0 auto;
+    // max-width: $xl;
+    // margin: 0 auto;
 }
 </style>

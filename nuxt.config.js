@@ -85,21 +85,10 @@ export default {
     ],
     lazy: true,
     langDir: "locales/"
-
-    // vueI18n: {
-    //   fallbackLocale: 'ua',
-    //   messages: {
-    //     ua: {
-    //       welcome: 'Привіт'
-    //     },
-    //     ru: {
-    //       welcome: 'Приевт'
-    //     },
-    //   }
-    // }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+
   }
 }

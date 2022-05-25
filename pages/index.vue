@@ -2,8 +2,9 @@
 
   <div class="">
 
-    <Navbar />
-
+    <Navbar/>
+    <Banner/>
+    <Tabs/>
 
   </div>
 
@@ -12,11 +13,15 @@
 <script lang="ts">
 import Vue from "vue";
 import Navbar from '@/components/M-Navbar.vue'
+import Banner from '@/components/M-Banner.vue'
+import Tabs from '@/components/M-Tabs.vue'
 
 export default Vue.extend({
   name: "IndexPage",
   components: {
-    Navbar
+    Navbar,
+    Banner,
+    Tabs,
   },
 });
 </script>

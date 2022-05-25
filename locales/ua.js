@@ -1,4 +1,5 @@
 export default {
+  enter: 'Увійти',
   welcome: 'Привіт', 
   stock: 'Акції',
   certificate: 'Сертифікати',
@@ -15,5 +16,7 @@ export default {
   gas_column: 'Газова колонка',
   signal: 'Сигналізатор',
   modem: 'Модем',
-  
+  gaz: 'Газове обладнання',
+  new_category: 'Нові категорії',
+  brands: 'Бренди',
 }

@@ -1,5 +1,7 @@
-import mButton from '@/components/UI/M-Button'
+// import mButton from '@/components/UI/M-Button'
+// import mMiniProductCard from '@/components/UI/M-MiniProductCard'
 
-export default [
-    mButton
-]
+// export default [
+//     mButton,
+//     mMiniProductCard
+// ]

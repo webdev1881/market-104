@@ -40,7 +40,7 @@ export default {
 
 
 
-<style lang='scss' scoped>
+<style lang='scss' >
   
 .banner-wrap {
   display: flex;
@@ -50,6 +50,18 @@ export default {
 .slider {
   height: 378px;
   width: 1134px;
+}
+
+.slick-prev {
+  left: 10px;
+  z-index: 1;
+}
+.slick-next {
+  right: 10px;
+  z-index: 1;
+}
+.slick-dots {
+  bottom: 10px;
 }
   
 </style>

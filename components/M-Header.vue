@@ -39,6 +39,7 @@
         <div class="header-right__account">
           <img src="@/static/img/account.png" alt="" class="account_logo_pic">
           <div class="account_login">
+            <nuxt-link :to="'/admin'"  class="account_login__title">{{ $t('admin') }}</nuxt-link>
             <nuxt-link :to="localePath('/auth')"  class="account_login__title">{{ $t('enter') }}</nuxt-link>
             <nuxt-link :to="localePath('/auth')">
               <img src="@/static/img/login.svg" class="account_login__pic">

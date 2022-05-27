@@ -48,6 +48,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios',
     '@nuxtjs/i18n',
     [
       '@nuxtjs/firebase',
@@ -79,6 +80,11 @@ export default {
   ],
 
   i18n: {
+    pages: {
+      admin: false,
+      users: false,
+    },
+    // strategy: 'prefix_except_default',
     defaultLocale: '',
     locales: [
       {code: 'ua', file: "ua.js" },

@@ -16,11 +16,15 @@
         <del class="oldprice">20 999 ₴</del>
         <div class="currprice">16 999 ₴</div>
       </div>
-      <div class="cart">
-        <div class="cart_icon">
 
-        </div>
+
+      <div class="cart">
+
+        <img src="@/static/svg/cart.svg" alt="" class="cart_icon">
+
       </div>
+      <!-- <div class="wrap_control"><div class="control_icon cart"></div><div class="count ">42</div></div> -->
+    
     </div>
     
   </div>
@@ -49,6 +53,23 @@ export default {
 
 
 <style lang='scss' scoped>
+
+
+
+      // .cart {
+      //   mask-image: url(@/static/svg/cart.svg);
+      // }
+
+
+
+
+
+
+
+
+
+
+
 
 .miniproductcard {
   width: 237px;
@@ -81,15 +102,17 @@ export default {
 }
 
 .cart {
-  align-self: flex-end;
-  mask-repeat: no-repeat;
   width: 44px;
   height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: $orange;
   border-radius: 50%;
   .cart_icon {
-    mask-image: url(@/static/svg/cart.svg);
-    background-color: white;
+    color: red;
+    width: 21px!important;
+    height: 21px!important;
   }
 }
 

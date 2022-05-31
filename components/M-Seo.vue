@@ -1,7 +1,7 @@
 <template>
 
-  <div class='thirdCompany'>
-    thirdCompany
+  <div class='seo'>
+    SEO
   </div>
 
 </template>
@@ -10,7 +10,7 @@
 <script>
 
 export default {
-  name: 'thirdCompany',
+  name: 'seo',
   data: () => ({
     
   }),

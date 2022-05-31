@@ -8,7 +8,7 @@
                 <Nuxt />
             </div>
         </main>
-        
+        <Help/>
         <Footer />
     </div>
     
@@ -18,10 +18,11 @@
 <script>
 import Header from '@/components/M-Header'
 import Footer from '@/components/M-Footer'
+import Help from '@/components/M-Help'
 export default {
     name: 'default',
     components: {
-        Header, Footer
+        Header, Footer, Help
     },
     data: () => ({
         

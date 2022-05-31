@@ -7,7 +7,9 @@
     <Tabs/>
     <FirstCompany/>
     <SecondCompany/>
-    <ThirdCompany/>
+    <Promo/>
+    <Seo/>
+    <Services/>
 
   </div>
 
@@ -20,7 +22,9 @@ import Banner from '@/components/M-Banner.vue'
 import Tabs from '@/components/M-Tabs.vue'
 import FirstCompany from '@/components/M-FirstCompany.vue'
 import SecondCompany from '@/components/M-SecondCompany.vue'
-import ThirdCompany from '@/components/M-ThirdCompany.vue'
+import Promo from '~/components/M-Promo.vue'
+import Seo from '~/components/M-Seo.vue'
+import Services from '~/components/M-Services.vue'
 
 export default Vue.extend({
   name: "IndexPage",
@@ -30,7 +34,9 @@ export default Vue.extend({
     Tabs,
     FirstCompany,
     SecondCompany,
-    ThirdCompany,
+    Promo,
+    Seo,
+    Services,
   },
 });
 </script>

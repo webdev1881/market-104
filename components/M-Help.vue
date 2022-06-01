@@ -2,7 +2,21 @@
 
   <div class='help'>
     <div class="help_wrapper md:container md:mx-auto">
-      HELP
+
+      <div class="help_title">
+        Дізнайся першим про знижку або цікаву пропозицію!
+
+
+        <ValidationProvider name="Phone" rules="required|phone" v-slot="{ errors }">
+          <input v-model="phone" type="text" placeholder="Phone">
+          <span class="error">{{ errors }}</span>
+        </ValidationProvider>
+
+
+      </div>
+      <div class="help_form">
+        <UIM-Input/>
+      </div>
     </div>
   </div>
 
@@ -10,12 +24,19 @@
 
 
 <script>
+import { ValidationProvider } from "vee-validate";
 
 export default {
   name: 'help',
+  components: {
+    ValidationProvider: ValidationProvider
+  },
   data: () => ({
     
   }),
+  created() {
+    console.log( this.errors )
+  },
 }
 
 </script>

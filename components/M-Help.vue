@@ -32,7 +32,7 @@ export default {
     ValidationProvider: ValidationProvider
   },
   data: () => ({
-    
+    phone: null,
   }),
   created() {
     console.log( this.errors )

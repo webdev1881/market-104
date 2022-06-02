@@ -36,27 +36,27 @@
     <div v-show="active === 'brands'" class="tab-2">
       <div class="item brand">
         <img src="@/static/img/test/lg.png" alt="">
-        <span class="title">{{ $t('LG Electronics') }}</span>
+        <span class="title">{{ 'LG Electronics' }}</span>
       </div>
       <div class="item brand">
         <img src="@/static/img/test/lg.png" alt="">
-        <span class="title">{{ $t('LG Electronics') }}</span>
+        <span class="title">{{ 'LG Electronics' }}</span>
       </div>
       <div class="item brand">
         <img src="@/static/img/test/lg.png" alt="">
-        <span class="title">{{ $t('LG Electronics') }}</span>
+        <span class="title">{{ 'LG Electronics' }}</span>
       </div>
       <div class="item brand">
         <img src="@/static/img/test/lg.png" alt="">
-        <span class="title">{{ $t('LG Electronics') }}</span>
+        <span class="title">{{ 'LG Electronics' }}</span>
       </div>
       <div class="item brand">
         <img src="@/static/img/test/lg.png" alt="">
-        <span class="title">{{ $t('LG Electronics') }}</span>
+        <span class="title">{{ 'LG Electronics' }}</span>
       </div>
       <div class="item brand">
         <img src="@/static/img/test/lg.png" alt="">
-        <span class="title">{{ $t('LG Electronics') }}</span>
+        <span class="title">{{ 'LG Electronics' }}</span>
       </div>
     </div>
 

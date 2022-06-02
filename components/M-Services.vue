@@ -109,18 +109,22 @@ export default {
 .delivery_icon {
   background-color: $blue;
   mask-image: url(@/static/svg/truck.svg);
+  mask-repeat: no-repeat;
 }
 .protect_icon {
   background-color: $green;
-  mask-image: url(@/static/svg/truck.svg);
+  mask-image: url(@/static/svg/stroke.svg);
+  mask-repeat: no-repeat;
 }
 .pay_icon {
   background-color: $orange;
-  mask-image: url(@/static/svg/truck.svg);
+  mask-image: url(@/static/svg/credit-card.svg);
+  mask-repeat: no-repeat;
 }
 .back_icon {
   background-color: $red;
-  mask-image: url(@/static/svg/truck.svg);
+  mask-image: url(@/static/svg/refresh.svg);
+  mask-repeat: no-repeat;
 }
 
 .service_card_title {

@@ -11,22 +11,18 @@ import {
   confirmed
 } from 'vee-validate/dist/rules';
 
-extend('required', required);
+extend('required', { ...required, message: 'Не повинно бути пустим.'});
+extend('email', { ...email, message: 'Email не коректний.'});
+extend('confirmed', { ...confirmed, message: 'Паролі не співпадають.'});
 
-extend('email', email);
-
-extend('confirmed', {
-  ...confirmed,
-  message: 'Passwords Don`t Match.'
-});
-
+// CUSTOM
 extend('phone', {
   validate: value => {
     if (!value) return true
     const regex = /^[0-9\s- +]*$/g
     return Boolean(value.match(regex))
   },
-  message: 'The Phone field must contain only numbers and dashes.'
+  message: 'Телефон має складатися з чисел.'
 });
 
 

@@ -1,9 +1,9 @@
 <template>
   <p class="m_input">
-    <span class="label"> {{ label }} </span>
+    <!-- <span class="label"> {{ label }} </span> -->
 
     <!-- <ValidationProvider v-slot="v"> -->
-    <input
+    <!-- <input
       autocomplete="off"
       :onpaste="onpaste"
       v-validate="validator"
@@ -16,7 +16,7 @@
       @input="update($event.target.value); errors;"
       :placeholder="placeholder"
       v-on:keypress="latin ? isLatin($event) : kiryl ? isKiryl($event) : number ? isNumber($event) : vin ? isVin($event) : '' "
-    />
+    /> -->
 
     <!-- <span class="error_message">{{ errors.first("v-input") | localize }}</span> -->
 
@@ -41,23 +41,24 @@ export default {
   // },
 
   props: {
-    vin: { type: Boolean, default: false },
-    onpaste: { type: String, default: "return true" },
-    isMob: { type: Boolean, default: false },
-    number: { type: Boolean, default: false },
-    max: { type: Number, default: null },
-    upper: { type: Boolean, default: false },
-    latin: { type: Boolean, default: false },
-    kiryl: { type: Boolean, default: false },
-    typeval: { type: String },
-    validator: { type: String },
-    rules: { type: Object },
-    error: { type: Array },
-    error_message: { type: Array },
-    id: { type: String },
-    label: { type: String, default: "" },
-    placeholder: { type: String, required: true },
-    value: { type: String, default: ""  },
+    // vin: { type: Boolean, default: false },
+    // onpaste: { type: String, default: "return true" },
+    // isMob: { type: Boolean, default: false },
+    // number: { type: Boolean, default: false },
+    // max: { type: Number, default: null },
+    // upper: { type: Boolean, default: false },
+    // latin: { type: Boolean, default: false },
+    // kiryl: { type: Boolean, default: false },
+    // typeval: { type: String },
+    // validator: { type: String },
+    // rules: { type: Object },
+    // error: { type: Array },
+    // error_message: { type: Array },
+    // id: { type: String },
+    // label: { type: String, default: "" },
+    // // placeholder: { type: String, required: true },
+    // placeholder: { type: String, default: "return true" },
+    // value: { type: String, default: ""  },
   },
   methods: {
     update(v) {

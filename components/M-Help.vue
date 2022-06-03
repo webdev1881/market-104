@@ -12,6 +12,8 @@
           <span class="error">{{ errors }}</span>
         </ValidationProvider>
 
+        <UIM-Range/>
+
 
       </div>
       <div class="help_form">

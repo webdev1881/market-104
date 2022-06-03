@@ -12,7 +12,9 @@
           <span class="error">{{ errors }}</span>
         </ValidationProvider>
 
-        <UIM-Range/>
+        <UIM-Range
+        :max="70"
+        />
 
 
       </div>
@@ -50,6 +52,10 @@ export default {
 .help {
   background-color: $blueGray;
   padding: 30px 0;
+}
+
+.slider {
+  width: 300px!important;
 }
   
 </style>

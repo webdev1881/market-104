@@ -10,7 +10,7 @@
     :min-range="500"
     :max="10000"
    ></vue-slider>
-
+  <div>value: {{ value }}</div>
 </div>
 
 

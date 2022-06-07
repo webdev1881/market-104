@@ -19,7 +19,6 @@ export default {
     }),
     layout: 'admin',
     validate() {
-        console.log( 'test'  );
         return true
     },
     methods: {

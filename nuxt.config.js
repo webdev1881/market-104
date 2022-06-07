@@ -1,6 +1,6 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  head: {
+  head: {  
     title: 'market-104',
     htmlAttrs: {
       lang: 'en'
@@ -98,5 +98,13 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: ["vee-validate/dist/rules"],
+  },
+
+
+  loading: {
+    color: 'blue',
+    height: '5px',
+    throttle: 0,
   }
+
 }

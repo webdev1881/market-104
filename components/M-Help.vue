@@ -38,7 +38,6 @@ export default {
     phone: null,
   }),
   created() {
-    console.log( this.errors )
   },
 }
 

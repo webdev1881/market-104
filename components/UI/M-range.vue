@@ -34,9 +34,9 @@
       // }
     }
   }
-</script>
+</script >
 
-<style>
+<style scoped>
 .slider {
   width: 300px!important;
 }

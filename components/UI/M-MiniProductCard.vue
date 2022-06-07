@@ -54,27 +54,10 @@ export default {
 
 <style lang='scss' scoped>
 
-
-
-      // .cart {
-      //   mask-image: url(@/static/svg/cart.svg);
-      // }
-
-
-
-
-
-
-
-
-
-
-
-
 .miniproductcard {
   width: 237px;
   height: auto;
-  // margin-right: 20px;
+  cursor: pointer;
 }
   
 .card_img {

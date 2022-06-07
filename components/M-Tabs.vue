@@ -33,6 +33,7 @@
       </div>
     </div>
 
+
     <div v-show="active === 'brands'" class="tab-2">
       <div class="item brand">
         <img src="@/static/img/test/lg.png" alt="">
@@ -129,6 +130,7 @@ export default {
   height: 176px;
   box-shadow: 3.30399e-16px 5.39583px 15.5556px rgba(0, 0, 0, 0.00416667), 3.0208e-16px 4.93333px 14.2222px rgba(0, 0, 0, 0.0166667), 2.5488e-16px 4.1625px 12px rgba(0, 0, 0, 0.0275), 1.888e-16px 3.08333px 8.88889px rgba(0, 0, 0, 0.0567), 1.0384e-16px 1.69583px 4.88889px rgba(0, 0, 0, 0.0842), 0px 0px 0px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  cursor: pointer;
   img {
     width: 82px;
     height: 102px;

@@ -2,7 +2,8 @@
 
   <div class='firstCompany'>
 
-    <div class="title">AJAX</div>
+    <!-- <div class="title">AJAX</div> -->
+    <nuxt-link class="title" :to="localePath('/catalog')"> AJAX </nuxt-link>
 
     <div class="content">
       <UIM-MiniProductCard
@@ -58,7 +59,7 @@ export default {
 <style lang='scss' scoped>
 
 .firstCompany {
-  // display: flex;
+  margin: 20px 0;
 }
 
 .content {
@@ -69,7 +70,6 @@ export default {
 .title {
   font-size: 20px;
   font-weight: 600;
-  margin: 20px 0;
 }
   
   

@@ -5,7 +5,7 @@
     <div class="header_top md:container md:mx-auto">
 
       <div class="header-left">
-        <nuxt-link to="/" class="header-logo">
+        <nuxt-link :to="localePath('/')" class="header-logo">
           <img src="@/static/img/logo.png" alt="" class="header-logo__pic">
           <div class="header-logo__title">маркет</div>
         </nuxt-link>

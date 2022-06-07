@@ -71,9 +71,7 @@ export default {
   }),
 
   async mounted() {
-    // console.log( this.$store.getters )
-    // const user = await this.$store.dispatch('fetchUser')
-    // console.log( user )
+
   },
 
 
@@ -83,14 +81,14 @@ export default {
     async logout({commit}) {
         const auth = getAuth();
         await signOut(auth).then(() => {
-          console.log( auth )
+          // console.log( auth )
         }).catch((e) => {
-          console.log( e )
+          // console.log( e )
         });
     },
 
     async setEmail() {
-      console.log( this.$accessor )
+      // console.log( this.$accessor )
       // this.$accessor.user.setEmail('test@email.com')
     },
 
@@ -140,7 +138,7 @@ export default {
     },
 
     async onSignInPhone() {
-      console.log( ' onSignInPhone()' )
+      // console.log( ' onSignInPhone()' )
       // const phoneNumber = '';
       // const phoneNumber = '+380991516010';
       const phoneNumber = '+380991516010';
@@ -148,12 +146,12 @@ export default {
       const auth = getAuth();
       signInWithPhoneNumber(auth, phoneNumber, appVerifier)
         .then((confirmationResult) => {
-          console.log( 'SMS sent.' )
+          // console.log( 'SMS sent.' )
           // SMS sent. Prompt user to type the code from the message, then sign the
           // user in with confirmationResult.confirm(code).
           window.confirmationResult = confirmationResult;
         }).catch((e) => {
-          console.log( e )
+          // console.log( e )
           window.recaptchaVerifier.render().then(function(widgetId) {
             grecaptcha.reset(widgetId);
           });
@@ -164,9 +162,9 @@ export default {
       const code = this.code
       confirmationResult.confirm(code).then((result) => {
         const user = result.user;
-        console.log( user )
+        // console.log( user )
       }).catch((e) => {
-        console.log( e )
+        // console.log( e )
       });
     },
 
@@ -184,7 +182,7 @@ export default {
 
   watch: {
   '$accessor.user.email': function() {
-    this.email = this.$accessor.user.email
+    // this.email = this.$accessor.user.email
     }
   },
 

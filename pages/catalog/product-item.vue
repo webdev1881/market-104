@@ -1,6 +1,6 @@
 <template>
 
-  <div class='miniproductcard'>
+  <div class='product-item'>
 
     <div class="card_img"><img :src="img" alt=""></div>
 
@@ -8,14 +8,13 @@
 
     <div class="ratings">
       <div class="empty-stars"></div>
-      <div class="full-stars" :style="rated"></div>
-      <!-- {{ (Math.random() * (5 - 1 + 1) + 1).toFixed(2) }} -->
+      <div class="full-stars" :style="{width:rate}"></div>
     </div>
 
     <div class="price">
       <div class="pricevalues">
-        <del class="oldprice"> {{ price }} ₴</del>
-        <div class="currprice"> {{ price }} ₴</div>
+        <del class="oldprice">20 999 ₴</del>
+        <div class="currprice">16 999 ₴</div>
       </div>
 
 
@@ -36,7 +35,7 @@
 <script>
 
 export default {
-  name: 'm-miniproductcard',
+  name: 'm-product-item',
   data: () => ({
     
   }),
@@ -47,12 +46,6 @@ export default {
       old_price: {type:String, default:''},
       price: {type:String, default:''},
   },
-  computed: {
-    rated () {
-      let random = (Math.random() * (5 - 1 + 1) + 1).toFixed(2)
-      return 'width: ' + random * 100 / 5 + '%' ;
-    }
-  },
 }
 
 </script>
@@ -61,30 +54,21 @@ export default {
 
 <style lang='scss' scoped>
 
-.miniproductcard {
+.product-item {
   width: 237px;
-  padding: 10px;
-  border: 1px solid #e9e9e9;
-  min-height: 350px;
+  height: auto;
   cursor: pointer;
-  &:hover {
-    box-shadow: 0px 0px 10px 10px silver;
-  }
 }
   
 .card_img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // width: 80%;
+  width: 50%;
   height: 170px;
-  overflow: hidden;
-  margin: 20px auto;
+  padding: 20px 0 20px;
+  margin: 0 auto;
 }
 
 .fullname {
   font-size: 14px;
-  height: 65px;
 }
 
 
@@ -131,7 +115,7 @@ export default {
     top: 0;
     white-space: nowrap;
     overflow: hidden;
-    color: $gray;
+    color: #0000;
 }
 .empty-stars:before, .full-stars:before {
     content:"\2605\2605\2605\2605\2605";
@@ -141,7 +125,7 @@ export default {
     -webkit-text-stroke: 1px #848484;
 }
 .full-stars:before {
-    -webkit-text-stroke: 1px $gray;
+    -webkit-text-stroke: 1px #0000;
 }
   
 </style>

@@ -13,9 +13,9 @@ export default {
 
   async GET_PRODUCTS( { commit } ) {
 
-    const products = await this.$axios.$get( 'https://jsonplaceholder.typicode.com/posts')
+    const products = await this.$axios.$get( 'https://dummyjson.com/products')
     .catch( (err) => console.log( err )  )
-    commit( 'SET_PRODUCTS', products )
+    commit( 'SET_PRODUCTS', products.products )
 
   }
 

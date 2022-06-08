@@ -102,7 +102,7 @@ export default {
 
 
   loading: {
-    color: 'blue',
+    color: '#F08F25',
     height: '5px',
     throttle: 0,
   }

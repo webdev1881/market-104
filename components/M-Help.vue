@@ -6,16 +6,12 @@
       <div class="help_title">
         Дізнайся першим про знижку або цікаву пропозицію!
 
-
         <ValidationProvider name="Phone" rules="required|phone" v-slot="{ errors }">
           <input v-model="phone" type="text" placeholder="Phone">
           <span class="error">{{ errors }}</span>
         </ValidationProvider>
 
-
       </div>
-
-        <UIM-Range/>
 
       <div class="help_form">
         <UIM-Input/>

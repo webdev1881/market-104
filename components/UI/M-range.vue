@@ -36,8 +36,8 @@
   }
 </script >
 
-<style scoped>
+<style lang='scss' scoped>
 .slider {
-  width: 300px!important;
+  // width: 300px!important;
 }
 </style>

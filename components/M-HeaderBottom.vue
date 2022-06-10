@@ -39,7 +39,7 @@ export default {
     padding: 15px 0;
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 6;
     .header_bottom__wrapper {
       position: sticky;
       top: 0;

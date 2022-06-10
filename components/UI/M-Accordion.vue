@@ -29,8 +29,8 @@
       </svg>
     </button>
 
-    <div v-show="isOpen" :id="`collapse${_uid}`">
-      <slot name="content" />
+    <div class="content" v-show="isOpen" :id="`collapse${_uid}`">
+      <slot name="content"  />
     </div>
   </div>
 </template>
@@ -40,7 +40,7 @@ export default {
   name: "m-accordion",
   data() {
     return {
-      isOpen: false,
+      isOpen: true,
     };
   },
 
@@ -59,6 +59,13 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: #3e77aa;
+  // border: 1px solid red;
 }
+
+.content {
+  // border: 1px solid red;
+}
+
 
 </style>

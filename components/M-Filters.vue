@@ -1,15 +1,28 @@
 <template>
 
     <div class='filters'>
-        filters
-        <UIM-Range/>
+        
+        <div class="range">
+          <div class="range_title"> Ціна </div>
+          <UIM-Range/>
+        </div>
 
-        <Accordion :headerStyle="headerStyle" :contentStyle="contentStyle">
 
 
-  Your accordion content. It can be simple text like this.
-  <p>It can also be HTML.</p>
-</Accordion>
+        <UIM-Accordion class="mb-4">
+          <template v-slot:title>
+            Accordion 1
+          </template>
+          <template v-slot:content>
+            <p>
+              <b>Lorem</b>, ipsum dolor sit amet consectetur adipisicing elit. Quia,
+              porro. Non a excepturi, voluptatibus ipsam magnam, eligendi,
+              accusantium ipsa quae quis praesentium voluptate saepe ullam sint ea
+              itaque consectetur impedit?
+            </p>
+          </template>
+        </UIM-Accordion>
+
 
 
     </div>
@@ -18,14 +31,14 @@
 
 
 <script>
-import Accordion from "@2alheure/vue-accordion";
+
 export default {
     name: 'm-filters',
     data: () => ({
         
     }),
     components: {
-      Accordion
+
     },
 }
 
@@ -34,7 +47,14 @@ export default {
 
 
 <style lang='scss' scoped>
+
+.range {
+  margin-bottom: 25px;
+}
     
     
-    
+.range_title {
+  margin-bottom: 15px;
+}
+
 </style>
